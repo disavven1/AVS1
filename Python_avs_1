@@ -1,0 +1,19 @@
+def is_valid_hexadecimal(hex_string):
+    
+    hex_string = hex_string.strip().upper()
+    if not hex_string:
+        return False
+    
+    valid_chars = set('0123456789ABCDEF')
+    
+    for char in hex_string:
+        if char not in valid_chars:
+            return False
+            
+    return True
+
+hex_number = input("Введите шестнадцатеричное число: ")
+if is_valid_hexadecimal(hex_number):
+    print(f"{hex_number} является корректным шестнадцатеричным числом.")
+else:
+    print(f"{hex_number} не является корректным шестнадцатеричным числом.")
